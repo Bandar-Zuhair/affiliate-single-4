@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
+
+/* General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Host Grotesk", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body{
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  text-align: center;
+  padding: 2vmax 0;
+  position: relative;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeInDown 1.5s;
+  margin-bottom: 0; /* Add space below the title */
+}
+
+/* Social Icons Container */
+.social_icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+  padding-top: 10px;
+}
+
+/* Individual Icon Styles */
+.social-icon {
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+  color: #ffd700; /* Golden color on hover */
+}
+
+
+
+
+
+
+/* Main content container */
+main {
+  flex: 1; /* Pushes the footer to the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensures about_section is right above the footer */
+}
+
+
+
+
+
+
+/* Product Section */
+.product_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.product_images {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image_viewer img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image_viewer img:hover {
+  transform: scale(1.05);
+}
+
+/* Thumbnail Container */
+.thumbnail_container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for multiple rows */
+  gap: 10px;
+  justify-content: center; /* Centers thumbnails within the container */
+  margin-top: 10px;
+  max-width: 450px; /* Ensures thumbnails don't exceed the width of the main image */
+}
+
+/* Thumbnails */
+.thumbnail {
+  width: 60px; /* Uniform size for all thumbnails */
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.product_details {
+  flex: 1;
+  max-width: 500px;
+  padding: 0 5px;
+}
+
+.product_name {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.product_description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.price {
+  font-size: 1.2rem;
+  margin: 15px 0 2vmax 0;
+  display: flex;
+  flex-direction: column; /* Stack current_price above price_details */
+}
+
+.current_price {
+  color: hsl(207, 100%, 50%);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 5px; /* Add space below current_price */
+}
+
+.price_details {
+  display: flex; /* Align old_price and discount side by side */
+  align-items: center;
+}
+
+.old_price {
+  text-decoration: line-through;
+  margin-right: 10px;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.discount {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+.cta_button {
+  text-decoration: none;
+  background: hsl(207, 100%, 50%);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.cta_button:hover {
+  background: #ff4a33;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* About Section */
+.about_section {
+  padding: 2px;
+  text-align: center;
+  background: black;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 5vmax;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+/* Initial state for animation */
+.animate_on_scroll {
+  transform: translateY(0px);
+  transition: all 1s ease !important;
+}
+
+/* Intro Animation */
+.intro_animation {
+  transform: translateY(0);
+}
+
+/* Outro Animation */
+.outro_animation {
+  transform: translateY(50px);
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .product_section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product_images, .product_details {
+    max-width: 100%;
+  }
+
+  .image_viewer img {
+    max-width: 350px;
+  }
+
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .product_name {
+    font-size: 1.8rem;
+  }
+
+  .current_price, .old_price, .discount {
+    font-size: 1.2rem;
+  }
+
+  .cta_button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .social_icons {
+    gap: 15px;
+  }
+
+  .social-icon {
+    font-size: 1.8rem;
+  }
+
+  .product_section {
+    padding: 20px 10px;
+  }
+
+  .image_viewer img {
+    max-width: 300px;
+  }
+
+  .thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+
+  .thumbnail_container {
+    max-width: 350px; /* Reduce container width for smaller screens */
+    gap: 8px;
+  }
+
+  .product_name {
+    font-size: 1.5rem;
+  }
+
+  .current_price, .old_price, .discount {
+    font-size: 1rem;
+  }
+
+  .cta_button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .about_section {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}
