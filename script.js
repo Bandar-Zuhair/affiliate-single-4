@@ -79,7 +79,7 @@ async function fetchAndDisplayProduct() {
 
             /* Insert a new click data to the google sheet */
             insertNewClick('affiliate single 4');
-            
+
             window.open(ProductAffiliateLink, '_blank');
         });
 
@@ -92,6 +92,7 @@ async function fetchAndDisplayProduct() {
 
         document.getElementById('website_name_id').innerText = `Welcome To ${websiteNameTitle}`;
         document.getElementById('website_description_id').innerText = websiteDescription;
+        document.getElementById('footer_copyright_id').innerText = websiteNameTitle;
 
 
 
@@ -134,10 +135,42 @@ document.addEventListener("DOMContentLoaded", fetchAndDisplayProduct);
 
 
 
+
+
 /* Function to change the product image
  */function changeImage(src) {
     document.getElementById('main_image_id').src = src;
 }
+
+// Fullscreen image functionality
+document.getElementById('main_image_id').addEventListener('click', function () {
+    const mainImageSrc = this.src;
+
+    // Set the full-screen image source
+    const fullscreenImage = document.getElementById('fullscreen_image');
+    fullscreenImage.src = mainImageSrc;
+
+    // Show the overlay with fade-in effect
+    const overlay = document.getElementById('fullscreen_overlay');
+    overlay.classList.add('visible');
+});
+
+// Close the overlay on click or pressing "Esc"
+document.getElementById('fullscreen_overlay').addEventListener('click', function () {
+    this.classList.remove('visible');
+});
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        document.getElementById('fullscreen_overlay').classList.remove('visible');
+    }
+});
+
+
+
+
+
+
 
 
 
