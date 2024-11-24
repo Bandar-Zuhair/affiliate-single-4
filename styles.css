@@ -4,7 +4,8 @@
 
 
 /* General Styles */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -15,7 +16,7 @@ html, body {
   box-sizing: border-box;
 }
 
-body{
+body {
   opacity: 0;
   transition: all 0.2s ease;
 }
@@ -83,14 +84,16 @@ header {
   font-size: 3rem;
   font-weight: bold;
   animation: fadeInDown 1.5s;
-  margin-bottom: 0; /* Add space below the title */
+  margin-bottom: 0;
+  /* Add space below the title */
 }
 
 /* Social Icons Container */
 .social_icons {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Space between icons */
+  gap: 20px;
+  /* Space between icons */
   padding-top: 10px;
 }
 
@@ -102,8 +105,10 @@ header {
 }
 
 .social-icon:hover {
-  transform: scale(1.2); /* Slight zoom effect on hover */
-  color: hsl(207, 100%, 50%); /* Golden color on hover */
+  transform: scale(1.2);
+  /* Slight zoom effect on hover */
+  color: hsl(207, 100%, 50%);
+  /* Golden color on hover */
 }
 
 
@@ -113,10 +118,12 @@ header {
 
 /* Main content container */
 main {
-  flex: 1; /* Pushes the footer to the bottom */
+  flex: 1;
+  /* Pushes the footer to the bottom */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Ensures about_section is right above the footer */
+  justify-content: flex-start;
+  /* Ensures about_section is right above the footer */
 }
 
 
@@ -158,16 +165,20 @@ main {
 /* Thumbnail Container */
 .thumbnail_container {
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping for multiple rows */
+  flex-wrap: wrap;
+  /* Allows wrapping for multiple rows */
   gap: 10px;
-  justify-content: center; /* Centers thumbnails within the container */
+  justify-content: center;
+  /* Centers thumbnails within the container */
   margin-top: 10px;
-  max-width: 450px; /* Ensures thumbnails don't exceed the width of the main image */
+  max-width: 450px;
+  /* Ensures thumbnails don't exceed the width of the main image */
 }
 
 /* Thumbnails */
 .thumbnail {
-  width: 60px; /* Uniform size for all thumbnails */
+  width: 60px;
+  /* Uniform size for all thumbnails */
   height: 60px;
   border-radius: 10px;
   cursor: pointer;
@@ -201,18 +212,21 @@ main {
   font-size: 1.2rem;
   margin: 15px 0 2vmax 0;
   display: flex;
-  flex-direction: column; /* Stack current_price above price_details */
+  flex-direction: column;
+  /* Stack current_price above price_details */
 }
 
 .current_price {
   color: hsl(207, 100%, 50%);
   font-weight: bold;
   font-size: 1.5rem;
-  margin-bottom: 5px; /* Add space below current_price */
+  margin-bottom: 5px;
+  /* Add space below current_price */
 }
 
 .price_details {
-  display: flex; /* Align old_price and discount side by side */
+  display: flex;
+  /* Align old_price and discount side by side */
   align-items: center;
 }
 
@@ -290,6 +304,7 @@ main {
     opacity: 0;
     transform: translateY(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -301,6 +316,7 @@ main {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -312,6 +328,7 @@ main {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -353,7 +370,8 @@ main {
     align-items: center;
   }
 
-  .product_images, .product_details {
+  .product_images,
+  .product_details {
     max-width: 100%;
   }
 
@@ -370,7 +388,9 @@ main {
     font-size: 1.8rem;
   }
 
-  .current_price, .old_price, .discount {
+  .current_price,
+  .old_price,
+  .discount {
     font-size: 1.2rem;
   }
 
@@ -407,7 +427,8 @@ main {
   }
 
   .thumbnail_container {
-    max-width: 350px; /* Reduce container width for smaller screens */
+    max-width: 350px;
+    /* Reduce container width for smaller screens */
     gap: 8px;
   }
 
@@ -415,7 +436,9 @@ main {
     font-size: 1.5rem;
   }
 
-  .current_price, .old_price, .discount {
+  .current_price,
+  .old_price,
+  .discount {
     font-size: 1rem;
   }
 
@@ -430,5 +453,20 @@ main {
 
   .footer {
     font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+  /* Fullscreen image styles */
+  .fullscreen_image_container img {
+    height: auto;
+    width: 100vw;
   }
 }
