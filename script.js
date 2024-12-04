@@ -69,7 +69,7 @@ async function fetchAndDisplayProduct() {
 
         document.getElementById('product_name_id').innerText = productName;
         document.getElementById('product_description_id').innerText = productDescription;
-        document.getElementById('product_current_price_id').innerText = `Only ${ProductCurrentPrice}`;
+        document.getElementById('product_current_price_id').innerText = ProductCurrentPrice;
         document.getElementById('product_old_price_id').innerText = ProductOldPrice;
         document.getElementById('product_percentage_off_id').innerText = ProductPercentageOff;
         document.getElementById('product_call_to_action_id').innerText = ProductCallToAction;
